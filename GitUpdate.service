@@ -1,0 +1,13 @@
+[Unit]
+Description=Start GitUpdate
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/bin/python3 /root/GitUpdate.py
+
+[Install]
+WantedBy=multi-user.target
