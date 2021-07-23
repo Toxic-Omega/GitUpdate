@@ -1,5 +1,5 @@
 [Unit]
-Description=starts mitmproxy and configure dns
+Description=Start Mitmdump
 After=network.target
 StartLimitIntervalSec=0
 
@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=dhclient && /usr/bin/mitmdump
+ExecStart=/usr/bin/mitmdump
 
 [Install]
 WantedBy=multi-user.target
